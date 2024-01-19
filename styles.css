@@ -18,7 +18,7 @@ body {
     background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
     background-repeat: repeat;
     animation: bg-animation .2s infinite;
-    opacity: .9;
+    opacity: 1;
     visibility: visible;
     z-index: 0;
   }
@@ -54,7 +54,7 @@ body {
     width: 150px; /* Ancho de los círculos */
     height: 150px; /* Altura de los círculos */
     animation: circle-animation 15s infinite alternate linear; /* Animación para cambiar el tamaño de los círculos más lentamente */
-    opacity: 0.2; /* Reduzca la opacidad de los círculos */
+    opacity: 0.5; /* Reduzca la opacidad de los círculos */
 }
 
 /* Estilos para el encabezado y la barra de navegación */
