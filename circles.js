@@ -3,7 +3,7 @@ function createRandomCircle(x, y) {
     const circle = document.createElement('div');
     circle.classList.add('circle');
 
-    // Asigna la posición del mouse a los círculos
+    // Asigna la posición a los círculos
     circle.style.left = `${x}px`;
     circle.style.top = `${y}px`;
 
@@ -16,7 +16,27 @@ function createRandomCircle(x, y) {
     }, 5000);
 }
 
-// Escucha el movimiento del mouse y crea círculos en la posición del mouse
-document.addEventListener('mousemove', (event) => {
-    createRandomCircle(event.clientX, event.clientY);
-});
+// Función para manejar el evento de movimiento (tanto mouse como touch)
+function handleMove(event) {
+    let x, y;
+    // Verifica si el evento es táctil
+    if (event.type === 'touchmove') {
+        // Previene el comportamiento por defecto para eventos táctiles
+        event.preventDefault();
+        // Obtiene las coordenadas del touch
+        x = event.touches[0].clientX;
+        y = event.touches[0].clientY;
+    } else {
+        // Obtiene las coordenadas del mouse
+        x = event.clientX;
+        y = event.clientY;
+    }
+    createRandomCircle(x, y);
+}
+
+// Escucha el movimiento del mouse
+document.addEventListener('mousemove', handleMove);
+
+// Escucha el movimiento táctil
+document.addEventListener('touchmove', handleMove);
+
