@@ -179,6 +179,21 @@ img {
         gap: 20px;
     }
     .tarjeta {
-        flex: 0 0 calc(100% - 20px); /* Hace que las tarjetas ocupen el 100% del ancho en dispositivos móviles */
+        flex: 0 0 calc(80% - 20px); /* Hace que las tarjetas ocupen el 100% del ancho en dispositivos móviles */
+        width: 400px;
+        height: 150px;
+    }
+    .tarjeta h1 {
+        margin: 40px; /* Elimina el margen predeterminado del encabezado */
+        font-size: 20px;
+    }
+    .tarjeta h2{
+        margin-top:-30px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .tarjeta p{
+        margin-top: -10px;
+        font-size: 12px;
     }
 }

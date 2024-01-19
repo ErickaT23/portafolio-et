@@ -4,7 +4,7 @@ const tarjetas = document.querySelectorAll('.tarjeta');
 if (window.innerWidth <= 768) { // Verifica el ancho de la pantalla
     tarjetas.forEach((tarjeta) => {
         tarjeta.addEventListener('click', () => {
-            tarjeta.style.height = '220px'; // Ajusta la altura al hacer clic
+            tarjeta.style.height = '150px'; // Ajusta la altura al hacer clic
         });
     });
 } else {
