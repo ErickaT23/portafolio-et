@@ -185,6 +185,6 @@ header {
         display: flex;
     }
     .caja-cristal{
-        max-width: 300px; /* Ajusta el ancho máximo según tus preferencias */
+       width: 85%;
     }
 }
