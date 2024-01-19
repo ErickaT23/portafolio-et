@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Didact Gothic', sans-serif;
+    background-color: #d2c7da68;
+    margin: 0;
+    overflow-x: hidden;
+}
+.bg{
+    pointer-events: none; /* Agrega esta línea para evitar interacciones con el fondo */
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+    z-index: 0;
+  }
+  
+ @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  }
+  .circle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Evita interacciones con los círculos */
+    z-index: -1; /* Asegura que los círculos estén por encima del contenido */
+}
+/* Estilos para los círculos */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-image: url(https://images.pexels.com/photos/6985045/pexels-photo-6985045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover; /* Ajusta el tamaño de la imagen al círculo */
+    width: 150px; /* Ancho de los círculos */
+    height: 150px; /* Altura de los círculos */
+    animation: circle-animation 15s infinite alternate linear; /* Animación para cambiar el tamaño de los círculos más lentamente */
+    opacity: 0.2; /* Reduzca la opacidad de los círculos */
+}
+
+/* Estilos para el encabezado y la barra de navegación */
+header {
+    background-color: transparent;
+    padding: 20px 0;
+}
+/* Estilos para el logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+/* Estilos para el menú de navegación */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.menu li {
+    margin: 0 20px;
+}
+.menu i{
+    background-color: rgb(146, 248, 255);
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    border: solid 1px rgb(60, 60, 60);
+    padding: 5px;
+    display: inline;
+}
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(60, 60, 60);
+    margin-left: 5px;
+}
+/* Estilos para el menú hamburguesa */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea el icono al lado derecho en pantallas pequeñas */
+    justify-content: center;
+    margin-right: 20px;
+    pointer-events: auto;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(60, 60, 60);;
+    margin: 3px 0;
+}
+/* Estilos para la caja de cristal */
+.caja-cristal {
+    background-color: rgba(255, 255, 255, 0.356); /* Fondo de la caja con transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+    padding: 20px;
+    text-align: center;
+    max-width: 800px; /* Ajusta el ancho máximo según tus preferencias */
+    margin: 0 auto; /* Centra la caja horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente */
+}
+.contenido h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+    font-family: 'Moirai One', system-ui;
+}
+.contenido p {
+    font-size: 1.2rem;
+    color: #333;
+}
+/* Estilos para las redes sociales */
+.redes-sociales {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.redes-sociales li {
+    display: inline;
+    margin: 0 5px; /* Espacio entre redes sociales */
+}
+
+.redes-sociales li:not(:last-child)::after {
+    content: "|"; /* Agrega un separador "|" después de cada red social, excepto la última */
+    margin-left: 5px; /* Espacio entre el separador y la siguiente red social */
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+    font-size: 20px;
+}
+.redes-sociales i{
+    background-color: rgb(146, 248, 255);
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    border: solid 1px rgb(60, 60, 60);
+    padding: 5px;
+    display: inline;
+}
+/* Estilos para el menú responsive */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none; 
+    }
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        background-color: #f6f2f29e;
+        z-index: 1;
+        width: 120px;
+    }
+    .menu.active li {
+        margin: 15px 0;
+    }
+    .menu-icon {
+        display: flex;
+    }
+    .caja-cristal{
+        max-width: 300px; /* Ajusta el ancho máximo según tus preferencias */
+    }
+}

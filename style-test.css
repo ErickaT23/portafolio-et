@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Evita que aparezca la barra de desplazamiento */
+}
+
+.circle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Evita interacciones con los círculos */
+    z-index: 1; /* Asegura que los círculos estén por encima del contenido */
+    animation: bg-animation 5s infinite linear; /* Animación para mover los círculos */
+}
+
+/* Estilos para los círculos */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-image: url(https://images.pexels.com/photos/6985045/pexels-photo-6985045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover; /* Ajusta el tamaño de la imagen al círculo */
+    width: 50px; /* Ancho de los círculos */
+    height: 50px; /* Altura de los círculos */
+    animation: circle-animation 5s infinite alternate linear; /* Animación para cambiar el tamaño de los círculos */
+}

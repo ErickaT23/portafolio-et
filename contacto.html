@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Moirai+One&display=swap" rel="stylesheet">
+    <title>Ericka Tuchán</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li><i class="fa-solid fa-house"></i><a href="/index.html">Inicio</a></li>
+                <!--<li><i class="fa-solid fa-user"></i><a href="#sobre-mi">Sobre Mí</a></li>-->
+                <li><i class="fa-solid fa-laptop-code"></i><a href="/portafolio.html">Portafolio</a></li>
+            </ul>
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="bg"></div>
+    <div class="circle-container">
+        <div class="circle"></div>
+    </div>
+    <div class="contenedor">
+        <div class="formulario-container">
+            <h1>Dime que te gustaría que crearamos juntxs.</h1>
+            <form action="https://formspree.io/f/mkndgakl" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                
+                <label for="mensaje">Escribe tu mensaje:</label>
+                <input class="mensaje" type="text" id="mensaje" name="mensaje" required>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="https://kit.fontawesome.com/8435ad2454.js" crossorigin="anonymous"></script>
+<script src="/script.js"></script>
+<script src="/circles.js"></script>
+</html>
