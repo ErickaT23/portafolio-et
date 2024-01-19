@@ -116,44 +116,51 @@ header {
     display: flex;
     justify-content: center; /* Centra verticalmente el contenido */
     align-items: center;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .formulario-container {
-    width: 600px;
-    height: 460px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo del formulario transparente */
-    border: 1px solid transparent; /* Borde inicial transparente */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+    width: 70%; /* Ancho relativo al contenedor padre */
+    max-width: 600px; /* Ancho máximo para dispositivos más grandes */
+    margin: auto; /* Centrar el formulario */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid transparent;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     padding: 20px;
     display: grid;
     border-radius: 10px;
+    box-sizing: border-box;
 }
-.formulario-container h1{
-    font-size: 30px;
+.formulario-container h1 {
     text-align: center;
     margin-bottom: 0px;
     font-weight: 500;
+    padding: 20px;
 }
-form{
+form {
     display: grid;
-    justify-content:center;
+    grid-template-columns: 1fr; /* Esto hará que todos los elementos ocupen toda la columna disponible */
+    grid-gap: 3px; /* Espacio entre los elementos del grid */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-/* Estilos para los campos de entrada */
 label {
     font-weight: bold;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
-input {
+input, .mensaje {
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc; /* Borde inicial */
+    font-size: 14px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 .mensaje{
-    width: 400px;
-    height:50px;
+    height: 70px;
 }
-/* Estilos para el botón de envío */
 button {
     margin-top: 10px;
     background-color: rgb(146, 248, 255);
@@ -163,10 +170,12 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bold;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 18px;
 }
-
 button:hover {
-    background-color:black;
+    background-color: black;
     color: rgb(146, 248, 255);
 }
 /* Estilos para el menú responsive */
@@ -191,17 +200,8 @@ button:hover {
         display: flex;
     }
     .formulario-container {
-        width: 400px;
-        height: 440px;
-    }
+        width: 70%;    }
     .formulario-container h1{
-        font-size: 18px;
-    }
-    .label{
-        font-size: 12px;
-        margin-top: 5px;
-    }
-    button{
-        margin-top: 5px;
+        font-size: 22px;
     }
 }
